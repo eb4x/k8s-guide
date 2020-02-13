@@ -1,9 +1,9 @@
 
-[openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:P-384 -out /home/myusername/.ssh/id_ec](openssl.md#Generating-an-EC-key)
+    [openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:P-384 -out /home/myusername/.ssh/id_ec](openssl.md#generating-an-ec-key)
 
-# Generate a req
-# if it complains about you missing the ~/.rnd just "touch" it.
-[openssl req -new -key /home/myusername/.ssh/id_ec -out myusername.csr -subj "/CN=myusername/O=system:masters"](openssl.md)
+# Generate a CSR
+    # if it complains about you missing the ~/.rnd just "touch" it.
+    [openssl req -new -key /home/myusername/.ssh/id_ec -out myusername.csr -subj "/CN=myusername/O=system:masters"](openssl.md)
 
 ## csr.yaml
 
